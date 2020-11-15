@@ -9,7 +9,7 @@ docker run -it quay.io/ansible/toolset /bin/bash
 
 ## What is bundled inside the container
 
-Container [](https://github.com/ansible-community/toolset/blob/main/requirements.txt)
+Generally the containers should bundle the latest stable versions of the tools below. An exact list can be seen in [requirements.txt](https://github.com/ansible-community/toolset/blob/main/requirements.txt) file used for building the container.
 
 * [ansible](https://pypi.org/project/ansible/)
 * [ansible-lint](https://pypi.org/project/ansible-lint/)
