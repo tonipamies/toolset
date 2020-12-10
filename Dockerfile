@@ -24,16 +24,17 @@ ENV ANSIBLE_FORCE_COLOR=1
 # moment we install it from kubic repors.
 RUN \
 apt-get update && \
-apt install -y ${PACKAGES} && \
+apt-get install -y ${PACKAGES} && \
 # workaround for https://github.com/containers/podman/issues/8665
 echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list && \
 echo 'deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/Debian_10/ /' > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list && \
 curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/Debian_10/Release.key | apt-key add - && \
-apt update && \
+apt-get update && \
 apt-get -t buster-backports install -y libseccomp-dev && \
 apt-get install -y podman && \
 apt-get clean && \
-rm -rf /var/lib/apt/lists/*
+rm -rf /var/lib/apt/lists/* && \
+python3 -m pip install -U --user 'pip>=20.3.1'
 
 COPY requirements.txt /tmp/requirements.txt
 
