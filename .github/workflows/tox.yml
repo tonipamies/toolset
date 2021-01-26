@@ -23,26 +23,15 @@ jobs:
       matrix:
         include:
           - tox_env: lint
+            python-version: 3.8
           - tox_env: deps
+            python-version: 3.8
     steps:
       - uses: actions/checkout@v1
-      - name: Find python version
-        id: py_ver
-        shell: python
-        if: ${{ contains(matrix.tox_env, 'py') }}
-        run: |
-          v = '${{ matrix.tox_env }}'.split('-')[0].lstrip('py')
-          print('::set-output name=version::{0}.{1}'.format(v[0],v[1:]))
-      # Even our lint and other envs need access to tox
-      - name: Install a default Python
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
-        if: ${{ ! contains(matrix.tox_env, 'py') }}
-      # Be sure to install the version of python needed by a specific test, if necessary
-      - name: Set up Python version
-        uses: actions/setup-python@v2
-        if: ${{ contains(matrix.tox_env, 'py') }}
         with:
-          python-version: ${{ steps.py_ver.outputs.version }}
+          python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
           python -m pip install -U pip
