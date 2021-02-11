@@ -13,7 +13,7 @@ jobs:
       - name: Clone the source code
         uses: actions/checkout@v2
       - name: Mirror base image from docker.io to quay.io
-        run: ./tools/mirror-base-image
+        run: sudo -E ./tools/mirror-base-image
         env:
           QUAY_PASS: ${{ secrets.QUAY_PASS }}
           QUAY_USER: ${{ secrets.QUAY_USER }}
