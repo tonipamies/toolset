@@ -15,3 +15,5 @@ Generally the containers should bundle the latest stable versions of the tools b
 * [ansible-lint](https://pypi.org/project/ansible-lint/)
 * [molecule](https://pypi.org/project/molecule/) and most of its plugins
 * [pytest](https://pypi.org/project/pytest/) and several of its plugins
+* [yamllint](https://yamllint.readthedocs.io/en/stable/) which is used by
+  ansible-lint itself.

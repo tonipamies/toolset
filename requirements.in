@@ -5,16 +5,17 @@ ansible-lint  # this also brings ansible
 molecule
 molecule-azure
 molecule-containers
-molecule-docker
 molecule-digitalocean
+molecule-docker
 molecule-ec2
 molecule-gce
 molecule-goss
 molecule-inspec
 molecule-libvirt
 molecule-lxd
-molecule-podman
 molecule-openstack
+molecule-podman
 molecule-vagrant
 openstacksdk
 ruamel.yaml.clib>=0.2.2  # performance
+yamllint>=1.26.0

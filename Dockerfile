@@ -50,6 +50,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 molecule --version && \
 molecule drivers && \
 python3 -m pip check && \
+yamllint --version && \
 which docker && \
 podman --version && \
 git --version
