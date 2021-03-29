@@ -50,7 +50,7 @@ molecule-lxd==0.2
 molecule-openstack==0.3
 molecule-podman==0.3.0
 molecule-vagrant==0.6.1
-molecule==3.2.4
+molecule==3.3.0
 munch==2.5.0
 netifaces==0.10.9
 openstacksdk==0.55.0
