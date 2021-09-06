@@ -54,7 +54,7 @@ molecule-inspec==1.1
 molecule-libvirt==0.0.4
 molecule-lxd==0.3
 molecule-openstack==0.3
-molecule-podman==0.3.0
+molecule-podman==1.0.1
 molecule-vagrant==0.6.3
 munch==2.5.0
 netaddr==0.8.0
