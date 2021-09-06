@@ -49,7 +49,7 @@ molecule-docker==1.0.2
 molecule-ec2==0.3
 molecule-gce==0.2
 molecule-goss==1.1
-molecule-hetznercloud==1.2.1
+molecule-hetznercloud==1.3.0
 molecule-inspec==1.1
 molecule-libvirt==0.0.4
 molecule-lxd==0.3
